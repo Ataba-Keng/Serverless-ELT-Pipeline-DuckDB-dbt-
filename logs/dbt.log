@@ -1,0 +1,80 @@
+[0m16:58:21.207649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73695bd01190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73695aa09e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x736959ac5370>]}
+
+
+============================== 16:58:21.218906 | 67089d40-1bad-486b-9be4-e59c5171412f ==============================
+[0m16:58:21.218906 [info ] [MainThread]: Running with dbt=1.10.16
+[0m16:58:21.220890 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'empty': 'None', 'version_check': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'log_format': 'default', 'invocation_command': 'dbt init dbt_project', 'log_cache_events': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/home/keng/.dbt', 'use_experimental_parser': 'False', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'no_print': 'None', 'warn_error': 'None', 'fail_fast': 'False', 'introspect': 'True', 'log_path': 'logs'}
+[0m16:58:21.252039 [info ] [MainThread]: Creating dbt configuration folder at /home/keng/.dbt
+[0m16:58:21.261538 [debug] [MainThread]: Starter project path: /home/keng/projetData/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m16:58:21.274567 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:58:21.277186 [info ] [MainThread]: Setting up your profile.
+[0m16:59:05.867420 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m16:59:05.874383 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/keng/projetData/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/keng/projetData/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/keng/projetData/venv/lib/python3.12/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/keng/projetData/venv/lib/python3.12/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/keng/projetData/venv/lib/python3.12/site-packages/dbt/task/init.py", line 261, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/keng/projetData/venv/lib/python3.12/site-packages/dbt/task/init.py", line 243, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+
+[0m16:59:05.879345 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 44.80064, "process_in_blocks": "48912", "process_kernel_time": 0.332433, "process_mem_max_rss": "99004", "process_out_blocks": "72", "process_user_time": 3.526444}
+[0m16:59:05.882180 [debug] [MainThread]: Command `dbt init` failed at 16:59:05.881380 after 44.80 seconds
+[0m16:59:05.884457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73695a4968a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73695a4c1d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73695a3a1dc0>]}
+[0m16:59:05.886480 [debug] [MainThread]: Flushing usage events
+[0m16:59:06.695391 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:59:44.118003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72a5e216e8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72a5e31f1dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72a5e40b2060>]}
+
+
+============================== 16:59:44.124661 | 3f1574c5-8f45-4f8d-9b28-2c284b751503 ==============================
+[0m16:59:44.124661 [info ] [MainThread]: Running with dbt=1.10.16
+[0m16:59:44.126122 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'write_json': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'warn_error': 'None', 'log_path': 'logs', 'quiet': 'False', 'log_cache_events': 'False', 'profiles_dir': '/home/keng/.dbt', 'invocation_command': 'dbt init dbt_project', 'use_experimental_parser': 'False', 'no_print': 'None', 'use_colors': 'True', 'debug': 'False', 'empty': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'fail_fast': 'False', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager'}
+[0m16:59:44.147252 [info ] [MainThread]: A project called dbt_project already exists here.
+[0m16:59:44.150855 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.16196193, "process_in_blocks": "0", "process_kernel_time": 0.235488, "process_mem_max_rss": "99188", "process_out_blocks": "8", "process_user_time": 3.257923}
+[0m16:59:44.152102 [debug] [MainThread]: Command `dbt init` succeeded at 16:59:44.151841 after 0.16 seconds
+[0m16:59:44.153005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72a5e264de50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72a5e40f2840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72a5e1e1f350>]}
+[0m16:59:44.154125 [debug] [MainThread]: Flushing usage events
+[0m16:59:45.181879 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:06:26.579399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368e7b23440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368e9df26f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368e7b201a0>]}
+
+
+============================== 17:06:26.591091 | fa7497b2-e472-4770-8f61-0ee2ccc2ed63 ==============================
+[0m17:06:26.591091 [info ] [MainThread]: Running with dbt=1.10.16
+[0m17:06:26.593148 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'empty': 'False', 'log_path': 'logs', 'log_cache_events': 'False', 'warn_error': 'None', 'use_colors': 'True', 'invocation_command': 'dbt run', 'write_json': 'True', 'log_format': 'default', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'fail_fast': 'False', 'debug': 'False', 'profiles_dir': '/home/keng/projetData', 'send_anonymous_usage_stats': 'True'}
+[0m17:06:26.594991 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/keng/projetData/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:06:26.598127 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.1905151, "process_in_blocks": "10816", "process_kernel_time": 0.286465, "process_mem_max_rss": "98464", "process_out_blocks": "24", "process_user_time": 3.597728}
+[0m17:06:26.599986 [debug] [MainThread]: Command `dbt run` failed at 17:06:26.599617 after 0.19 seconds
+[0m17:06:26.601511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368e83ef530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368ec167b00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7368e7485370>]}
+[0m17:06:26.603118 [debug] [MainThread]: Flushing usage events
+[0m17:06:28.144362 [debug] [MainThread]: An error was encountered while trying to flush usage events
